@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  padding: 0 24px;
+}
+
+.loading-bar {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  height: 8px;
+  border-radius: 2px;
+  vertical-align: baseline;
+  background-color: rgba(10, 27, 57, 0.35);
+  &::after {
+    background-color: rgba(10, 27, 57, 0.8);
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: -40%;
+    width: 33.333333%;
+    border-radius: 2px;
+    animation: loading 5s infinite ease-in-out;
+  }
+}
+
+@keyframes loading {
+  50% {
+    left: 107%;
+  }
+}
+
+.modal-open {
+  position: absolute;
+  z-index: 99;
+  top: 100px;
+  left: 40%;
+  background-color: #fff;
+  padding: 0 40px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
