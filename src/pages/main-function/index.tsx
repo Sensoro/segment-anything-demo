@@ -7,7 +7,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import * as _ from "underscore";
+import * as _ from "lodash";
 import Home from "../home";
 import AppContext from "../../hooks/createContext";
 import { Canvas, LoadingModal, SegmentDrawer } from "../../components";

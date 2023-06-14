@@ -1,17 +1,20 @@
 {
-  "name": "vite-vanilla",
+  "name": "segment-anything",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
+    "deploy": "gh-pages -d dist -b gh-pages -f",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.6.1",
     "konva": "^9.2.0",
+    "lodash": "^4.17.21",
     "lz-string": "^1.5.0",
     "onnxruntime-web": "^1.15.0",
     "react": "^16.14.0",
@@ -20,14 +23,13 @@
     "react-konva": "^16.13.0-6",
     "react-photo-album": "^2.2.2",
     "react-router": "^6.12.1",
-    "react-router-dom": "^6.12.1",
-    "underscore": "^1.13.6"
+    "react-router-dom": "^6.12.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.195",
     "@types/node": "^20.3.0",
     "@types/react": "^16.14.0",
     "@types/react-dom": "^16.9.9",
-    "@types/underscore": "^1.11.5",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
@@ -35,10 +37,12 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.24",
     "rollup-plugin-copy": "^3.4.0",
     "tailwindcss": "^3.3.2",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "vite": "^4.3.9",
+    "vite-plugin-externals": "^0.6.2"
   }
 }
