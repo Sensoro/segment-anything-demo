@@ -6,6 +6,8 @@ import Home from "./pages/home";
 import Demo from "./pages/main-function";
 import "./index.css";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const router = createBrowserRouter(
   [
     {
@@ -23,7 +25,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/segment-anything-demo/'
+    basename: BASE_URL,
   }
 );
 

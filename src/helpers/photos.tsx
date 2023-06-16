@@ -1,11 +1,13 @@
+const BASE_URL = import.meta.env.BASE_URL;
+
 const photos = [
   {
-    src: '/gallery/18135.jpg',
+    src: `${BASE_URL}gallery/18135.jpg`,
     width: 2000,
     height: 1538
   },
   {
-    src: '/gallery/dogs-with-stick.jpg',
+    src: `${BASE_URL}/gallery/dogs-with-stick.jpg`,
     width: 1072,
     height: 603
   }
