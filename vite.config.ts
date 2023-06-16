@@ -4,12 +4,10 @@ import { viteExternalsPlugin } from 'vite-plugin-externals'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/segment-anything/',
+  base: '/segment-anything-demo/',
   plugins: [
     react(),
-    viteExternalsPlugin({
-      'onnxruntime-web': 'ort'
-    })
+    viteExternalsPlugin({}),
   ],
   define: {
     'process.env': {},

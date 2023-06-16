@@ -6,21 +6,26 @@ import Home from "./pages/home";
 import Demo from "./pages/main-function";
 import "./index.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "main",
+          element: <Demo />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "main",
-        element: <Demo />,
-      },
-    ],
-  },
-]);
+    basename: '/segment-anything-demo/'
+  }
+);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
