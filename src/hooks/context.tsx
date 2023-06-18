@@ -15,6 +15,7 @@ import {
 import { handleImageScale } from "../helpers/ImageHelper";
 import getFile from "../helpers/getFile";
 import AppContext from "./createContext";
+import { MODEL_PATH } from '../config';
 
 const AppContextProvider = (props: {
   children: React.ReactElement<any, string | React.JSXElementConstructor<any>>;
@@ -93,9 +94,7 @@ const AppContextProvider = (props: {
   useEffect(() => {
     const initModel = async () => {
       try {
-        if (import.meta.env.VITE_MODEL_DIR === undefined) return;
-        const URL: string = import.meta.env.VITE_MODEL_DIR;
-        const model = await InferenceSession.create(URL);
+        const model = await InferenceSession.create(MODEL_PATH);
         setModel(model);
       } catch (e) {
         console.log(e);
